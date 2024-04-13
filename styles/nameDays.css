@@ -1,0 +1,148 @@
+/*! Name day today section */
+#nameDayToday {
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+#nameDayToday section {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#nameDayToday section:first-of-type {
+  flex: 2;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#nameDayToday section:last-of-type {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 20px;
+}
+#nameDayToday section:first-of-type h2 {
+  display: inline-block;
+}
+#nameDayTodayH2 {
+  margin: 18px 0px;
+}
+#nameDayTodayP {
+  margin-top: 0px;
+  margin-bottom: 18px;
+}
+
+/*! Next three name days section */
+#nextThreeNameDays {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+#nextThreeNameDays section {
+  flex: 1;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+#nextThreeNameDays section h2 {
+  margin: 0px;
+  padding: 19.92px 0px;
+  border-radius: 10px;
+}
+#nextThreeNameDays section:nth-child(1) h2 {
+  background-color: white;
+  color: black;
+}
+#nextThreeNameDays section:nth-child(2) h2 {
+  background-color: green;
+}
+#nextThreeNameDays section:nth-child(3) h2 {
+  background-color: #b30000;
+}
+#nextThreeNameDays section p {
+  margin: auto;
+}
+
+/*! Search by name section */
+#nameDaySearchContainer {
+  position: relative;
+}
+#searchResults {
+  background-color: var(--light-dark);
+  width: 800px;
+  border-radius: 0px 0px 25px 25px;
+  padding: 0px 15px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 300px;
+  overflow-y: auto;
+  top: 70%;
+  z-index: 0;
+  transition: 0.3s;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  display: none;
+}
+#searchResults p {
+  margin: 0px;
+  padding: 10px 0px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+#searchResults p:hover {
+  background-color: var(--very-light-gray);
+  transition: 0.3s;
+}
+#nameSearch {
+  margin-bottom: 0px !important;
+  position: relative;
+  z-index: 1;
+  background-color: var(--background-dark);
+  padding: 10px 15px;
+  font-size: 20px;
+  transition: border-color 0.3s ease;
+  margin: 20px auto !important;
+  width: 800px;
+  text-align: center;
+  border-radius: 25px;
+  display: block;
+  font-family: "Comfortaa", cursive;
+}
+#nameSearch:focus {
+  border-color: var(--yellow);
+}
+/*Hide the scrollbar*/
+#searchResults::-webkit-scrollbar {
+  width: 0;
+}
+
+/*! Clicked name day info */
+#nameDayClickedContainer {
+  display: none;
+  justify-content: center;
+}
+.nameDayClicked {
+  border: 1px solid var(--yellow);
+  border-radius: 10px;
+  padding: 0px 30px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nameDayClicked:nth-child(2) {
+  margin-left: 10px;
+}

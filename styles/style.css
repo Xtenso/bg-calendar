@@ -1,0 +1,347 @@
+/*Base colors variables*/
+:root {
+  --white: #ffffff;
+  --yellow: #ffc000;
+  --yellow-dark: #e6ad00;
+  --red: #b30000;
+  --orange: #e25825;
+  --light-green: #52a447;
+  --checkbox-blue: #3280e5;
+  --background-dark: #121212;
+  --light-dark: #252525;
+  --very-light-gray: #525252;
+  --black: #000000;
+  --text-gray: #b3b3b3;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-dark) !important;
+  color: var(--white) !important;
+  font-family: "Comfortaa", cursive !important;
+  min-width: 350px;
+}
+
+/*Confirmation message div*/
+#warningMessage {
+  display: flex;
+  height: 50px;
+  background-color: var(--red);
+  justify-content: center;
+}
+#warningMessage h3 {
+  margin: 0;
+  font-size: 22px;
+  align-self: center;
+}
+#confirmationMessage {
+  display: none;
+  height: 50px;
+  background-color: var(--light-green);
+  justify-content: center;
+}
+#confirmationMessage h3 {
+  margin: 0;
+  font-size: 22px;
+  align-self: center;
+}
+.slide-up {
+  animation: slideUp 1s ease-in-out forwards; /* Slide up animation */
+}
+.slide-up-body {
+  animation: slideUpBody 1s ease-in-out forwards; /* Slide up animation */
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes slideUpBody {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+/*header*/
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  text-align: center;
+}
+
+#logoDiv {
+  margin: auto;
+  margin-left: 0px;
+}
+
+#logo {
+  cursor: pointer;
+  margin-left: 60px;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bolder;
+  background: linear-gradient(
+    to right,
+    white 0%,
+    white 30%,
+    green 33.33%,
+    green 66%,
+    #b30000 69%,
+    #b30000 100%
+  );
+
+  /* Make the background visible only on the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* This will make the text transparent, showing the clipped background */
+  color: transparent;
+
+  /* Optional: For better cross-browser compatibility */
+  -webkit-text-fill-color: transparent;
+}
+
+/*nav menu*/
+nav {
+  margin: 20px;
+  margin-right: 30px;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+  position: relative;
+  margin-right: 30px;
+}
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 22px !important;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+nav ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: var(--yellow);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li:hover::after {
+  width: 100%;
+}
+nav ul li a:hover {
+  color: var(--yellow);
+}
+nav button.hamburger-menu {
+  display: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 28px;
+  border: none;
+  cursor: pointer;
+}
+.mainContainer {
+  margin: 20px 35px;
+}
+
+/*footer*/
+footer {
+  text-align: center;
+  padding: 20px 40px;
+  margin: auto;
+  color: var(--text-gray);
+  margin-top: 40px;
+}
+footer h2 {
+  margin-top: 0px;
+}
+
+/**Global elements*/
+/*!Buttons*/
+.custom-button {
+  cursor: pointer;
+  font-family: "Comfortaa", cursive;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: bolder;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: unset;
+  transition: all 0.5s;
+  padding: 10;
+  background-color: transparent;
+  color: var(--white);
+}
+.custom-button:hover {
+  background: linear-gradient(
+    110deg,
+    rgba(193, 79, 13, 1) 26%,
+    rgba(212, 118, 48, 1) 54%,
+    rgba(225, 157, 55, 1) 87%
+  );
+  transform: scale(1.04);
+  color: black;
+}
+
+/*Accordion styling*/
+#accordionContainer {
+  width: 90%;
+  margin: auto;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.accordion-button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  color: white;
+  font-family: "Comfortaa", cursive;
+  font-size: 22px;
+  margin: 10px;
+  font-weight: bolder;
+  padding-left: 25px;
+}
+.accordion-body {
+  width: 94%;
+  font-size: 18px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.accordion-button:focus {
+  outline: none;
+}
+.accordion-item {
+  border: 1px solid white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 0px;
+}
+
+/**Global settings*/
+/*Hide the scrollbar*/
+body::-webkit-scrollbar {
+  width: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+/*Text input fields*/
+input[type="text"] {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  outline: none;
+}
+
+/*! Report form popup */
+/** Modal overlay styling */
+#modalOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1000; /* Ensure the overlay is above other elements */
+}
+/** Popup styling */
+#modalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-dark);
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 875px;
+}
+#modalContent textarea {
+  display: block;
+  resize: none;
+  width: 98%;
+  margin: 10px auto;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  border-color: white;
+  height: 100px;
+  font-size: 18px;
+  font-family: "Comfortaa", cursive;
+  padding: 5px;
+}
+#modalContent input[type="text"] {
+  flex: 1;
+  display: inline-block;
+  border-radius: 10px;
+  color: white !important;
+  font-size: 18px;
+  font-family: "Comfortaa", cursive;
+  padding: 6px 0px;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+#modalContent select {
+  flex: 1;
+  display: inline-block;
+  background-color: transparent;
+  border-color: white;
+  border-radius: 10px;
+  color: white;
+  padding-left: 10px;
+  font-size: 18px;
+  font-family: "Comfortaa", cursive;
+  padding: 5px;
+}
+#modalContent option {
+  background-color: var(--light-dark);
+}
+#reportFormButtons {
+  text-align: center;
+}
+#reportFormLine1 {
+  text-align: center;
+  display: flex;
+}
+/*White placeholder text to be easily visible*/
+#reportForm input::placeholder,
+#reportForm textarea::placeholder {
+  color: white;
+}
+
+/*ADD STYLES FOR DARK AND LIGHT MODE*/
+/*stop forced page conversion to dark mode from browsers*/

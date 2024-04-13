@@ -1,0 +1,22 @@
+#nameDayDetailsContainer {
+  display: flex;
+}
+#nameDayDetailsCol1,
+#nameDayDetailsCol2 {
+  background-color: var(--light-dark);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#nameDayDetailsCol1 {
+  flex: 4;
+  margin-right: 20px;
+  padding: 20px;
+}
+#nameDayDetailsCol2 {
+  flex: 1;
+  padding: 10px;
+}
+#similarNameDays li {
+  cursor: pointer;
+}

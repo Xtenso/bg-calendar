@@ -1,0 +1,181 @@
+/**Responsive design*/
+@media only screen and (max-width: 1200px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 79px;
+    left: 0;
+    right: 0;
+    background-color: #121212;
+    padding: 10px;
+    border-bottom: 3px solid #ffc000;
+    z-index: 2;
+    padding-left: 50px;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  nav ul li a {
+    font-size: 20px !important;
+  }
+  nav button.hamburger-menu {
+    display: block;
+  }
+  .active {
+    display: block;
+  }
+  .inactive {
+    position: absolute;
+    z-index: 1;
+  }
+
+  /**Today page*/
+  .upcomingHolidayTodayPage:hover {
+    color: inherit !important; /* or any other color value */
+    font-weight: normal !important; /* or any other font weight value */
+    font-size: inherit !important; /* or any other font size value */
+    transition: none !important; /* remove transition */
+  }
+
+  #flexContainerTodayPage {
+    flex-direction: column;
+  }
+  #flexContainerTodayPageCol1 {
+    margin-right: 0px !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #todayFlex {
+    flex-direction: column;
+  }
+  #todaysNameDays {
+    margin-right: 0px !important;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #logo {
+    margin-left: 30px;
+  }
+  nav ul {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .mainContainer {
+    margin: 20px 30px;
+  }
+  #logo {
+    font-size: 32px;
+  }
+
+  /**Today page*/
+  #flexContainerTodayPageCol1 span:last-of-type {
+    display: none;
+  }
+  #flexContainerTodayPageCol1 h2 {
+    text-align: center !important;
+  }
+  #flexContainerTodayPageCol2 .calendars-container {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .upcomingHolidayTodayPage {
+    text-align: center !important;
+  }
+  .upcomingHolidayTodayPageOverflow {
+    max-width: 100% !important;
+  }
+}
+@media (max-width: 500px) {
+  .mainContainer {
+    margin: 20px 20px;
+  }
+  #logo {
+    font-size: 26px !important;
+  }
+  h1 {
+    font-size: 28px !important;
+  }
+  h2 {
+    font-size: 20px !important;
+  }
+  h3 {
+    font-size: 18px !important;
+  }
+  p {
+    font-size: 15px !important;
+  }
+  nav {
+    margin: 10px 20px;
+  }
+  nav ul {
+    top: 59px;
+  }
+  nav ul li a {
+    font-size: 18px !important;
+  }
+
+  /**Today page*/
+  #flexContainerTodayPageCol2 .date {
+    padding: 14px !important;
+  }
+  #flexContainerTodayPageCol2 .dates {
+    height: 260px !important;
+  }
+  .monthHeader {
+    font-size: 20px !important;
+  }
+  #prev-month,
+  #next-month {
+    font-size: 40px !important;
+  }
+  #homePageMonthHeader svg {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media (max-width: 450px) {
+  h2 {
+    font-size: 18px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  #logo {
+    margin-left: 20px;
+    font-size: 25px !important;
+  }
+  nav ul {
+    padding-left: 10px;
+  }
+
+  /**Today page*/
+  #flexContainerTodayPageCol2 .date {
+    padding: 10px !important;
+    font-size: 15px;
+  }
+  #flexContainerTodayPageCol2 .dates {
+    height: 200px !important;
+  }
+  .monthHeader {
+    font-size: 16px !important;
+  }
+}
+@media only screen and (max-width: 401px) {
+  #logo {
+    font-size: 20px !important;
+  }
+  nav {
+    margin: 10px;
+  }
+  nav ul li a {
+    font-size: 16px !important;
+  }
+
+  /**Today page*/
+  .day {
+    font-size: 14px !important;
+  }
+}

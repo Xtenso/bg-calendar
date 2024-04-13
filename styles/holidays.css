@@ -1,0 +1,144 @@
+.pageDescription p {
+  font-size: 18px;
+}
+.pageDescription {
+  margin: 30px auto;
+}
+/*Days of the year graph*/
+#barContainer {
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+#barContainer p {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+#bar {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#bar span {
+  height: 20px;
+  display: inline-block;
+  border-radius: 10px;
+  margin-right: -15px;
+}
+#bar span:last-child {
+  margin-right: 0;
+}
+#barDescription span {
+  margin-right: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+}
+#warningSign {
+  height: 14px;
+  text-align: center;
+  margin-left: 10px;
+}
+#warningSign:hover[title]:before {
+  content: attr(title);
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/*Filters*/
+#filters {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+.custom-select select {
+  display: block;
+  width: 100%;
+  padding: 0px 8px;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  appearance: none; /* Remove default appearance */
+  font-size: 22px;
+  font-family: "Comfortaa", cursive;
+}
+.custom-select select:focus {
+  outline: none;
+}
+
+#filters option {
+  background-color: black;
+  font-weight: normal;
+}
+.custom-checkbox input {
+  display: none;
+}
+.custom-checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Text color when checkbox is checked */
+.custom-checkbox input:checked ~ #officialCheckboxSpan {
+  color: #b30000;
+}
+.custom-checkbox input:checked ~ #schoolCheckboxSpan {
+  color: #e6ad00;
+}
+/* Check mark symbol */
+.checkMark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.custom-checkbox input:checked ~ .checkMark:after {
+  display: block;
+}
+.custom-checkbox .checkMark:after {
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/*Accordions*/
+.accordion-body ul {
+  margin: 0;
+  padding-left: 10px;
+  font-size: 18px;
+}
+.accordion-body ul {
+  list-style: none;
+}
+.accordion-body ul li::before {
+  content: "\2022";
+  font-size: 24px;
+  margin-right: 10px;
+}
+#holidayAccordion ul li::before {
+  color: var(--red);
+}
+#schoolAccordion ul li::before {
+  color: var(--yellow);
+}

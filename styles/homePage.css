@@ -1,0 +1,168 @@
+#todayFlex {
+  display: flex;
+}
+#todaysNameDays,
+#todaysHolidays,
+#todaysSchoolHolidays {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--light-dark);
+}
+#todaysNameDays section:first-of-type,
+#todaysHolidays section:first-of-type,
+#todaysSchoolHolidays section:first-of-type {
+  border-radius: 10px;
+  background-color: var(--red);
+  padding: 15px;
+}
+#todaysNameDays section:first-of-type {
+  background-color: green;
+}
+#todaysNameDays section:first-of-type h2,
+#todaysHolidays section:first-of-type h2,
+#todaysSchoolHolidays section:first-of-type h2 {
+  margin: 0px;
+}
+#todaysNameDays {
+  margin-right: 20px;
+}
+#flexContainerTodayPage {
+  display: flex;
+}
+#flexContainerTodayPageCol1 {
+  flex: 2;
+  margin-right: 40px;
+}
+#flexContainerTodayPageCol1 h2,
+#flexContainerTodayPageCol1 p {
+  text-align: left;
+}
+#flexContainerTodayPageCol1 h2 {
+  margin: 30px 0px;
+}
+#flexContainerTodayPageCol2 {
+  flex: 1;
+}
+#flexContainerTodayPageCol2 .month {
+  width: 100%; /* Adjust the width as needed */
+  border: none;
+}
+#flexContainerTodayPageCol2 .dates {
+  height: 300px;
+}
+#flexContainerTodayPageCol2 .dates a {
+  height: fit-content;
+  display: contents;
+}
+#flexContainerTodayPageCol2 .date {
+  padding: 17px;
+  border: 3px solid var(--background-dark);
+}
+#flexContainerTodayPageCol2 .date:hover {
+  border-color: white;
+}
+#todaysSchoolHolidays {
+  margin-top: 20px;
+}
+#todaysSchoolHolidays section:first-of-type {
+  background-color: var(--yellow);
+}
+#todaysSchoolHolidays section:first-of-type h2 {
+  color: black;
+}
+
+/*Handles overflowing and makes sure all elements stay on a single line*/
+.upcomingHolidayTodayPageOverflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 246px);
+  display: inline-block;
+}
+.eventDescriptionTodayPageOverflow {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-height: 36px;
+}
+.upcomingHolidayTodayPage {
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.upcomingHolidayTodayPage:hover {
+  color: var(--yellow);
+  font-weight: bold;
+  font-size: 22px;
+  transition: 0.5s;
+}
+
+/**Calendar month switching header*/
+#homePageMonthHeader {
+  display: flex;
+}
+#homePageMonthHeader button {
+  width: 60px;
+  color: white;
+  background-color: transparent;
+  font-size: 50px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#homePageMonthHeader button:hover {
+  color: var(--yellow);
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+#homePageMonthHeader a {
+  display: flex;
+  align-items: center;
+}
+
+/**Special event section*/
+#specialEvent {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--light-dark);
+  border-radius: 10px;
+  padding: 10px;
+  height: auto;
+  margin-bottom: 20px;
+}
+#specialEvent section:first-of-type {
+  flex: 1;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#specialEvent section:last-of-type {
+  flex: 4;
+  padding: 0px 20px;
+}
+#specialEvent section:last-of-type h2,
+#specialEvent section:last-of-type p {
+  text-align: left;
+}
+#specialEvent section:last-of-type h2 a {
+  float: right;
+  font-size: 18px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 7px;
+  color: black;
+  position: relative;
+  top: -4px;
+}
+#specialEvent img {
+  max-height: 100px;
+  width: 100px;
+  height: 100%;
+  margin-left: 10px;
+  align-self: center;
+}

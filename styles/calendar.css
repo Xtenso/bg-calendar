@@ -1,0 +1,65 @@
+/*Calendar*/
+.calendars-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0px;
+}
+.month {
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+.monthHeader {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+.day {
+  padding: 5px;
+}
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding-top: 10px;
+  height: 228px;
+}
+.date {
+  padding: 8px;
+  border: 2px solid #121212;
+  border-radius: 10px;
+  align-self: center;
+  font-size: 17px;
+}
+.date:hover {
+  border: 2px solid white;
+}
+.date:hover[title]:before {
+  content: attr(title);
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
+}
+.past {
+  color: gray;
+}
+.month h2 {
+  margin: 20px auto;
+}
