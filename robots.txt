@@ -1,4 +1,6 @@
 User-agent: *
-Disallow:
+Disallow: /bgcalendar.kesug.com/
+Disallow: /*?date=
+Disallow: /404.php
 
 Sitemap: https://bgcalendar.kesug.com/sitemap.xml

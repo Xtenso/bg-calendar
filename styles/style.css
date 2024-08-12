@@ -6,12 +6,12 @@
   --red: #b30000;
   --orange: #e25825;
   --light-green: #52a447;
-  --checkbox-blue: #3280e5;
+  --blue: #3095d9;
+  --darker-blue: #3280e5;
   --background-dark: #121212;
-  --light-dark: #252525;
+  --light-dark: #202020;
   --very-light-gray: #525252;
   --black: #000000;
-  --text-gray: #b3b3b3;
 }
 body {
   padding: 0;
@@ -172,8 +172,8 @@ footer {
   text-align: center;
   padding: 20px 40px;
   margin: auto;
-  color: var(--text-gray);
   margin-top: 40px;
+  background-color: var(--light-dark);
 }
 footer h2 {
   margin-top: 0px;

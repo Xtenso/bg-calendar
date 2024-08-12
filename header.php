@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow"> <!--Allows search engines to index this and all related pages-->
 	<meta name="description" content="<?php echo !empty($metaDescription) ? $metaDescription : 'Всички официални празници, именни дни, както и най-важните събития от България, събрани на едно място.'; ?>">
+	<meta name="og:site_name" content="Български Календар">
 	<meta name="keywords" content="календар, български календар, именни дни, почивни дни, официални празници, важни събития, събития, празници, дни">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
@@ -19,9 +20,9 @@
 		<link rel="stylesheet" type="text/css" href="styles/<?php echo $additionalStyling2; ?>.css">
 	<?php endif; ?>
 	<!--Website icon-->
-	<link rel="icon" href="img/warning.png" type="image/x-icon">
-	<link rel="shortcut icon" href="img/warning.png" type="image/x-icon"> <!--For old browsers-->
-	<link rel="apple-touch-icon" href="img/warning.png"> <!--For Apple devices; NEEDS TO BE PNG-->
+	<link rel="icon" href="img/logo.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon"> <!--For old browsers-->
+	<link rel="apple-touch-icon" href="img/logo.png"> <!--For Apple devices; NEEDS TO BE PNG-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">

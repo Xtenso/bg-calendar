@@ -22,10 +22,8 @@ include 'header.php';
 <!--Days of the year graph-->
 <?php
 //number of weekdays
-function countWeekendsInYear($year)
-{
+function countWeekendsInYear($year) {
 	$weekendCount = 0;
-
 	for ($month = 1; $month <= 12; $month++) {
 		// Get the number of days in the month
 		$daysInMonth = date('t', strtotime("$year-$month-01"));
@@ -112,8 +110,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 unset($uniqueDates, $endDate, $startDate);
 
 //Checking for a leap year
-function isLeapYear($year)
-{
+function isLeapYear($year) {
 	return (($year % 4 == 0) && ($year % 100 != 0)) || ($year % 400 == 0);
 }
 
@@ -176,8 +173,18 @@ $workingDays = $totalDays - $totalWeekends - $officialHolidaysOff;
 <div class="calendars-container">
 	<?php
 	$months = [
-		'Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни',
-		'Юли', 'Август', 'Септември', 'Октомври', 'Ноември', 'Декември'
+		'Януари',
+		'Февруари',
+		'Март',
+		'Април',
+		'Май',
+		'Юни',
+		'Юли',
+		'Август',
+		'Септември',
+		'Октомври',
+		'Ноември',
+		'Декември'
 	];
 	$days = ['П', 'В', 'С', 'Ч', 'П', 'С', 'Н'];
 

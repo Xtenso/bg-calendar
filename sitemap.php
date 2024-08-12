@@ -22,8 +22,7 @@ $main_pages = array(
 );
 
 // Function to generate sitemap
-function generate_sitemap($main_pages, $allNames)
-{
+function generate_sitemap($main_pages, $allNames) {
     // Open sitemap file for writing
     $sitemap_file = fopen("sitemap.xml", "w");
     // Write XML header
@@ -57,8 +56,6 @@ function generate_sitemap($main_pages, $allNames)
 
 // Generate sitemap
 generate_sitemap($main_pages, $allNames);
-
-//echo 'Sitemap generated successfully.';
 ?>
 
 <?php
@@ -75,6 +72,3 @@ echo "</ul>";
 <?php
 include 'footer.php';
 ?>
-
-<!--<div id="mysitemapgenerator_loadcorsdata" data-token="5a4dff099f570cbb07a20cec9d01caa4" data-domain="www.mysitemapgenerator.com"></div>
-<script src="https://www.mysitemapgenerator.com/api/embedmap.min.js"></script>-->
