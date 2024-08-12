@@ -1,10 +1,6 @@
 <!--header-->
 <?php
-if (isset($_GET['year'])) {
-	$year = $_GET['year'];
-} else {
-	$year = date('Y'); //It sets the year to the current one
-}
+$year = isset($_GET['year']) ? $_GET['year'] : date('Y');
 $pageTitle = "Почивни дни $year";
 $additionalStyling = 'holidays';
 $additionalStyling2 = 'calendar';

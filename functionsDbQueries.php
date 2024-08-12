@@ -1,5 +1,7 @@
-//! Here can be found all reusable db queries
 <?php
+//! Here can be found all reusable db queries
+include 'objects.php';
+
 //? Method to fetch all holidays for a specific year and return them as an object array
 function getHolidaysByYear($conn, $year) {
     $query = "SELECT `name`, `description`, `date`, `end_date`, `type`, `stays_same` 
