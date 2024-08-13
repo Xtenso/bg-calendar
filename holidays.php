@@ -7,6 +7,7 @@ $additionalStyling2 = 'calendar';
 $currentURL = "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $metaDescription = "Всички официални празници, почивни и неучебни дни в България през $year, събрани на едно място.";
 include 'header.php';
+include 'functions.php';
 ?>
 
 <!--Page title and description-->
@@ -17,31 +18,9 @@ include 'header.php';
 
 <!--Days of the year graph-->
 <?php
-//number of weekdays
-function countWeekendsInYear($year) {
-	$weekendCount = 0;
-	for ($month = 1; $month <= 12; $month++) {
-		// Get the number of days in the month
-		$daysInMonth = date('t', strtotime("$year-$month-01"));
-
-		for ($day = 1; $day <= $daysInMonth; $day++) {
-			$dayOfWeek = date('w', strtotime("$year-$month-$day"));
-
-			// If it's a Saturday (6) or Sunday (0), increase the counter
-			if ($dayOfWeek == 0 || $dayOfWeek == 6) {
-				$weekendCount++;
-			}
-		}
-	}
-
-	return $weekendCount;
-}
-$totalWeekends = countWeekendsInYear($year);
-
-// Number of official holidays which are not during the weekend and don't overlap with other holidays
-$officialHolidaysOff = 0;
-//School days off (not including weekends or official holidays)
-$schoolHolidaysOff = 0;
+$totalWeekends = countWeekendsInYear($year); //Number of
+$officialHolidaysOff = 0; // Number of official holidays which are not during the weekend and don't overlap with other holidays
+$schoolHolidaysOff = 0; //School days off (not including weekends or official holidays)
 // Construct the SQL query
 $query = "SELECT `date`, `end_date`, stays_same, type FROM holidays 
 			WHERE (`stays_same` = 'false' AND YEAR(date) = '$year') 
@@ -53,7 +32,6 @@ $query = "SELECT `date`, `end_date`, stays_same, type FROM holidays
 					OR (YEAR(date) = '$year' AND YEAR(end_date) > '$year')  -- Start date in current year, end date in future year
 				)
 			)";
-// Execute the query
 $result = mysqli_query($conn, $query);
 // Array to store each unique holiday date
 $uniqueDates = [];
@@ -104,11 +82,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 	}
 }
 unset($uniqueDates, $endDate, $startDate);
-
-//Checking for a leap year
-function isLeapYear($year) {
-	return (($year % 4 == 0) && ($year % 100 != 0)) || ($year % 400 == 0);
-}
 
 //total number of days off
 $totalDaysOff = $totalWeekends + $officialHolidaysOff;
@@ -183,8 +156,6 @@ $workingDays = $totalDays - $totalWeekends - $officialHolidaysOff;
 		'Декември'
 	];
 	$days = ['П', 'В', 'С', 'Ч', 'П', 'С', 'Н'];
-
-	//the year is at the top of the page for integration in other elements of the website
 
 	// Include the holidays array and sql query
 	include 'holidaysArray.php';
